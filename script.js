@@ -11,13 +11,26 @@
 //quando l'utente clicca su una casella gli faccio capire che è cliccata tramite un cambiamento di classe addEventListener(click,)
 
 let livelloScelto = prompt("scegli il livello di difficoltà tra 1 e 3");
+let levels;
 
 while ((livelloScelto != "1") && (livelloScelto != 2) && (livelloScelto != 3)){
  livelloScelto = prompt("scegli un numero da 1 e 3 ")
 }
 
 
-let levels;
+if (livelloScelto === "1"){
+    levels = 101;
+    baseClass = "square";
+    generateGrid();
+} else if(livelloScelto === "2"){
+    levels = 82;
+    baseClass = "square2";
+    generateGrid();
+} else {
+    levels = 50;
+    baseClass = "square3";
+    generateGrid();
+}
 
 function generateGrid() {
     for (let i = 1; i < levels; i++){ 
@@ -36,18 +49,3 @@ function generateGrid() {
         creazione.appendChild(box);
     }
 }
-
-if (livelloScelto === "1"){
-    levels = 101;
-    baseClass = "square";
-    generateGrid();
-} else if(livelloScelto === "2"){
-    levels = 82;
-    baseClass = "square2";
-    generateGrid();
-} else {
-    levels = 50;
-    baseClass = "square3";
-    generateGrid();
-}
-
