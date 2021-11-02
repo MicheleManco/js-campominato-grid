@@ -15,6 +15,10 @@ body {
     width:calc((100% / 10 ) - 10px );
     height: 70px;
     background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .container2 {
@@ -30,6 +34,10 @@ body {
     width:calc((100% / 9 ) - 10px );
     height: 70px;
     background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .container3 {
@@ -46,4 +54,13 @@ body {
     width:calc((100% / 7 ) - 10px );
     height: 70px;
     background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
+
+.colore {
+    background-color: darkcyan;
+} 
+

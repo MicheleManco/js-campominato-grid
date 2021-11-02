@@ -16,32 +16,38 @@ while ((livelloScelto != "1") && (livelloScelto != 2) && (livelloScelto != 3)){
  livelloScelto = prompt("scegli un numero da 1 e 3 ")
 }
 
+
+let levels;
+
+function generateGrid() {
+    for (let i = 1; i < levels; i++){ 
+        let creazione = document.getElementById("contenitore");
+        // no innerHTML, usa createElement e sull'elemento creato aggiungi addEventListner
+        let box = document.createElement('div');
+        box.classList.add(baseClass);
+        box.addEventListener("click", 
+            function() {
+                box.innerHTML += `
+                <div class="selected">${i}</div>
+                `;
+                box.classList.add("colore")
+                console.log('click');
+        });
+        creazione.appendChild(box);
+    }
+}
+
 if (livelloScelto === "1"){
-    for (let i = 0; i < 100; i++){ 
-        let creazione = document.getElementById("contenitore")
-    creazione.innerHTML += `
-        <div class="square"></div>
-    `
-    }
-
-}else if(livelloScelto === "2"){
-    for (let i = 0; i < 81; i++){
-        let creazione = document.getElementById("contenitore");
-        creazione.className = "container2";
-        console.log(creazione);
-        creazione.innerHTML += `
-            <div class="square2"></div>
-        `
-    }
-
-}else {
-    for (let i = 0; i < 49; i++){
-        let creazione = document.getElementById("contenitore");
-        creazione.className = "container3 ";
-        console.log(creazione);
-        creazione.innerHTML += `
-            <div class="square3"></div>
-        `
-    }
+    levels = 101;
+    baseClass = "square";
+    generateGrid();
+} else if(livelloScelto === "2"){
+    levels = 82;
+    baseClass = "square2";
+    generateGrid();
+} else {
+    levels = 50;
+    baseClass = "square3";
+    generateGrid();
 }
 
