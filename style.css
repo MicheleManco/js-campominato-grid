@@ -2,7 +2,7 @@ body {
     background-color: rgb(45, 45, 134);
 }
 
-.container.active {
+.container {
     width: 70%;
     margin: 50px auto;
     background-color: white;
@@ -10,14 +10,14 @@ body {
     flex-wrap: wrap;
 }
 
-.square.active {
+.square {
     margin: 5px;
     width:calc((100% / 10 ) - 10px );
     height: 70px;
     background-color: blue;
 }
 
-.container2.active {
+.container2 {
     width: 60%;
     margin: 50px auto;
     background-color: white;
@@ -25,14 +25,14 @@ body {
     flex-wrap: wrap;
 }
 
-.square2.active {
+.square2 {
     margin: 5px;
     width:calc((100% / 9 ) - 10px );
     height: 70px;
     background-color: blue;
 }
 
-.container3.active {
+.container3 {
     width: 50%;
     margin: 50px auto;
     background-color: white;
@@ -41,7 +41,7 @@ body {
 }
 
 
-.square3.active {
+.square3 {
     margin: 5px;
     width:calc((100% / 7 ) - 10px );
     height: 70px;
