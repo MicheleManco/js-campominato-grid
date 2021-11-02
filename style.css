@@ -19,6 +19,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    color: blue;
 }
 
 .container2 {
@@ -38,6 +39,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    color: blue;
 }
 
 .container3 {
@@ -58,9 +60,12 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    color: blue;
 }
 
 .colore {
     background-color: darkcyan;
 } 
+
+
 

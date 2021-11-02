@@ -38,11 +38,9 @@ function generateGrid() {
         // no innerHTML, usa createElement e sull'elemento creato aggiungi addEventListner
         let box = document.createElement('div');
         box.classList.add(baseClass);
+        box.innerText = i;
         box.addEventListener("click", 
             function() {
-                box.innerHTML += `
-                <div class="selected">${i}</div>
-                `;
                 box.classList.add("colore")
                 console.log('click');
         });
