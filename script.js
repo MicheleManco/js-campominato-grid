@@ -13,7 +13,7 @@
 let livelloScelto = prompt("scegli il livello di difficoltà tra 1 e 3");
 let creazione = document.getElementById("contenitore");
 
-while ((livelloScelto != "1") && (livelloScelto != 2) && (livelloScelto != 3)){
+while ((livelloScelto !== "1") && (livelloScelto !== "2") && (livelloScelto !== "3")){
  livelloScelto = prompt("scegli un numero da 1 e 3 ")
 }
 
@@ -26,6 +26,12 @@ if (livelloScelto === "1"){
     generateGrid(49, "square3");
 }
 
+// switch(livelloScelto){
+//     case "1" : 
+//     generateGrid(100, "square");
+//     break;
+// }
+
 
 
 function generateGrid(levels, baseClass) {
@@ -36,7 +42,7 @@ function generateGrid(levels, baseClass) {
         box.addEventListener("click", 
             function() {
                 box.innerText = i;
-                box.classList.add("colore")
+                box.classList.add("colore");
                 console.log('click');
         });
         creazione.appendChild(box);
