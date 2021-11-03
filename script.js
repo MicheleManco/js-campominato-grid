@@ -26,17 +26,11 @@ if (livelloScelto === "1"){
     generateGrid(49, "square3");
 }
 
-// switch(livelloScelto){
-//     case "1" : 
-//     generateGrid(100, "square");
-//     break;
-// }
 
 
 
 function generateGrid(levels, baseClass) {
     for (let i = 1; i <= levels; i++){ 
-        // no innerHTML, usa createElement e sull'elemento creato aggiungi addEventListner
         let box = document.createElement('div');
         box.classList.add(baseClass);
         box.addEventListener("click", 
