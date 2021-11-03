@@ -11,7 +11,7 @@
 //quando l'utente clicca su una casella gli faccio capire che è cliccata tramite un cambiamento di classe addEventListener(click,)
 
 let livelloScelto = prompt("scegli il livello di difficoltà tra 1 e 3");
-let levels;
+let creazione = document.getElementById("contenitore");
 
 while ((livelloScelto != "1") && (livelloScelto != 2) && (livelloScelto != 3)){
  livelloScelto = prompt("scegli un numero da 1 e 3 ")
@@ -19,28 +19,23 @@ while ((livelloScelto != "1") && (livelloScelto != 2) && (livelloScelto != 3)){
 
 
 if (livelloScelto === "1"){
-    levels = 101;
-    baseClass = "square";
-    generateGrid();
+    generateGrid(100, "square");
 } else if(livelloScelto === "2"){
-    levels = 82;
-    baseClass = "square2";
-    generateGrid();
-} else {
-    levels = 50;
-    baseClass = "square3";
-    generateGrid();
+    generateGrid(81, "square2");
+} else { 
+    generateGrid(49, "square3");
 }
 
-function generateGrid() {
-    for (let i = 1; i < levels; i++){ 
-        let creazione = document.getElementById("contenitore");
+
+
+function generateGrid(levels, baseClass) {
+    for (let i = 1; i <= levels; i++){ 
         // no innerHTML, usa createElement e sull'elemento creato aggiungi addEventListner
         let box = document.createElement('div');
         box.classList.add(baseClass);
-        box.innerText = i;
         box.addEventListener("click", 
             function() {
+                box.innerText = i;
                 box.classList.add("colore")
                 console.log('click');
         });
